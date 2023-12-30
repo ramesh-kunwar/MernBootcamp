@@ -8,7 +8,9 @@ export const Filter = ({ filterData, category, setCategory }) => {
         return (
           <button
             onClick={() => filterHandler(data.title)}
-            className="btn btn-primary mx-1"
+            className={`btn btn-primary mx-1 ${
+              category === data.title && "btn-danger"
+            }`}
             key={data.id}
           >
             {data.title}
